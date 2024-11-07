@@ -15,7 +15,7 @@ class findSystem():
         if a == 0 :
             return b, 0, 1
 
-        gcd, x1, y1 = ExtendedEuclidAlgo(b % a, a)
+        gcd, x1, y1 = findSystem.ExtendedEuclidAlgo(b % a, a)
 
         # Update x and y using results of recursive
         # call
