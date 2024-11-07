@@ -118,4 +118,4 @@ if __name__ == '__main__':
 
    systemSolution=findSystem.linearCongruence(nn_sumup, vb_sumup, sum_all)
 
-   print (systemSolution
+   print (systemSolution)
