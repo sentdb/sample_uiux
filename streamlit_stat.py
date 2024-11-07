@@ -106,7 +106,7 @@ class findSystem():
 
         congruence = "[[ " +s+ "]] .X " +" ≡ " + "[[ " +s1+ "]]" + " mod ( " + "[[ " +s2+ "]]"+ " ) "
 
-        return nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence
+        return world, nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence
 
 if __name__ == '__main__':
    #foo=findSystem()
