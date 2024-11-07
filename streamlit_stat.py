@@ -114,7 +114,7 @@ if __name__ == '__main__':
    with open('articles.txt') as f:
         texts = f.readline()
 
-   nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence = findSystem.nounsVerbs(texts)
+   topchart, nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence = findSystem.nounsVerbs(texts)
 
    systemSolution=findSystem.linearCongruence(nn_sumup, vb_sumup, sum_all)
 
