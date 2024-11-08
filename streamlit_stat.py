@@ -4,11 +4,11 @@ import nltk
 import re
 import pandas as pd
 
-col_names =  ['Word', 'Freq']
-df1  = pd.DataFrame(columns = col_names)
-df2  = pd.DataFrame(columns = col_names)
 
 class findSystem():
+    col_names =  ['Word', 'Freq']
+    df1  = pd.DataFrame(columns = col_names)
+    df2  = pd.DataFrame(columns = col_names)
 
     def __init__(self):
         self = self
