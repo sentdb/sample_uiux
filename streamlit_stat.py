@@ -106,7 +106,7 @@ class findSystem():
 
         congruence = "[[ " +s+ "]] .X " +" ≡ " + "[[ " +s1+ "]]" + " mod ( " + "[[ " +s2+ "]]"+ " ) "
 
-        return world, nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence
+        return df_words, df_words1, nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence
 
 if __name__ == '__main__':
    #foo=findSystem()
@@ -114,7 +114,7 @@ if __name__ == '__main__':
    with open('articles.txt') as f:
         texts = f.readline()
 
-   topchart, nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence = findSystem.nounsVerbs(texts)
+   topNouns, topVerbs, nn_sumup,vb_sumup,sum_all,s1,s2,equationEstimated,congruence = findSystem.nounsVerbs(texts)
 
    systemSolution=findSystem.linearCongruence(nn_sumup, vb_sumup, sum_all)
 
