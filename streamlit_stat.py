@@ -4,6 +4,10 @@ import nltk
 import re
 import pandas as pd
 
+col_names =  ['Word', 'Freq']
+df1  = pd.DataFrame(columns = col_names)
+df2  = pd.DataFrame(columns = col_names)
+
 class findSystem():
 
     def __init__(self):
@@ -83,7 +87,8 @@ class findSystem():
         fdist1 = nltk.FreqDist(verbPhrases)
         fdist1 = fdist1.most_common()
         df_words1 = pd.DataFrame(data=fdist1,columns=['vb','vb_occurences'])
-
+        df2=df_words1
+        
         # create math operation
         nn_sumup=sum(df_words["nn_occurences"])
         vb_sumup=sum(df_words1["vb_occurences"])
