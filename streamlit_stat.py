@@ -84,7 +84,7 @@ class findSystem():
         fdist = fdist.most_common()
         df_words = pd.DataFrame(data=fdist,columns=['nn','nn_occurences'])
         global df1
-        df1==df_words
+        df1=df_words
         
         fdist1 = nltk.FreqDist(verbPhrases)
         fdist1 = fdist1.most_common()
