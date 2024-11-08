@@ -83,12 +83,14 @@ class findSystem():
         fdist = nltk.FreqDist(nounPhrases)
         fdist = fdist.most_common()
         df_words = pd.DataFrame(data=fdist,columns=['nn','nn_occurences'])
-        global df1=df_words
+        global df1
+        df1==df_words
         
         fdist1 = nltk.FreqDist(verbPhrases)
         fdist1 = fdist1.most_common()
         df_words1 = pd.DataFrame(data=fdist1,columns=['vb','vb_occurences'])
-        global df2=df_words1
+        global df2
+        df2=df_words1
         
         # create math operation
         nn_sumup=sum(df_words["nn_occurences"])
