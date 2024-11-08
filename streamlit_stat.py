@@ -57,7 +57,7 @@ class findSystem():
             return ((x0 + i * (N // d)) % N)
 
     def nounsVerbs(texts):
-        lines=re.sub(r'[^a-zA-Z]', ' ', texts)  
+        lines=re.sub(r'[^a-zA-Z]', ' ', str(texts))  
         text = nltk.word_tokenize(lines)
         pos_tagged = nltk.pos_tag(text)
 
@@ -80,13 +80,13 @@ class findSystem():
 
 
         # create frequency distribution
-        fdist = nltk.FreqDist(nounPhrases)
+        fdist = nltk.FreqDist(nounPhrases[0])
         fdist = fdist.most_common()
         df_words = pd.DataFrame(data=fdist,columns=['nn','nn_occurences'])
         global df1
         df1=df_words
         
-        fdist1 = nltk.FreqDist(verbPhrases)
+        fdist1 = nltk.FreqDist(verbPhrases[0])
         fdist1 = fdist1.most_common()
         df_words1 = pd.DataFrame(data=fdist1,columns=['vb','vb_occurences'])
         global df2
