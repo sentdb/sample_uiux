@@ -21,7 +21,8 @@ class trend():
   return trends
  def shannonDiversity(df):
         #print(df[1])
-  df["proportion"] = df[1] / sum(df[1])
+  #df["proportion"] = df[1] / sum(df[1])
+  df["proportion"] = df.loc[:,1].div(sum(df[1]), axis=0)
   df["naturalLog"] = np.log(df["proportion"])
   df["summation"] = df["proportion"] * df["naturalLog"]
   df = df.dropna(how='any',axis=0)
