@@ -1,5 +1,7 @@
 from scipy import stats
-import numpy as np                                                                              class trend():
+import numpy as np       
+
+class trend():
     def statcalc(df1,df2):                              stat_hypo, p_value  = stats.ttest_ind(df1["nn_occurences"],df2["vb_occurences"])        
         # Interpret the results:                        alpha = 0.05
         if p_value < alpha:
