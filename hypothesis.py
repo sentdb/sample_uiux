@@ -18,7 +18,7 @@ class trend():
         #print(f"degrees of freedom: {dof}")
         #print("expected frequencies:")
         #print(expected)
-   return trends
+  return trends
  def shannonDiversity(df):
         #print(df[1])
   df["proportion"] = df[1] / sum(df[1])
