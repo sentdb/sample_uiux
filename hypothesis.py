@@ -8,9 +8,9 @@ class trend():
         # Interpret the results:
         alpha = 0.05
         if p_value < alpha:
-            prop="Reject the null hypothesis; there is a significant difference between the noun frequency this texts and verbs frequency."
+            prop="H0:Reject the null hypothesis; there is a significant difference between the noun frequency this texts and verbs frequency."
         else:
-            prop="Fail to reject the null hypothesis; there is no significant difference between the noun frequency this texts and verbs frequency."
+            prop="H1: Fail to reject the null hypothesis; there is no significant difference between the noun frequency this texts and verbs frequency."
 
         trends = stats.chi2_contingency([df1["nn_occurences"].head(10),df2["vb_occurences"].head(10)])
 
